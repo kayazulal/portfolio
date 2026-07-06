@@ -61,10 +61,17 @@
             font-size: 0.9rem;
         }
 
-        .contact-info span {
+        .contact-info span, .contact-info a {
             background: rgba(255, 255, 255, 0.1);
             padding: 0.4rem 1rem;
             border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            background: var(--secondary-color);
         }
 
         main {
@@ -221,13 +228,14 @@
             <h2>Electronics and Communication Engineer</h2>
             <div class="contact-info">
                 <span>📍 Istanbul, Sancaktepe</span>
-                <span>📞 05300546918</span>
                 <span>✉️ kayazulal17@gmail.com</span>
+                <a href="https://www.linkedin.com/in/z%C3%BClal-kaya-278754289" target="_blank">🔗 LinkedIn Profile</a>
             </div>
         </div>
     </header>
 
     <main>
+        <!-- Left Column: About, Experience, and Projects -->
         <div class="main-content">
             <section id="about">
                 <h3>👤 About Me</h3>
@@ -291,6 +299,7 @@
             </section>
         </div>
 
+        <!-- Right Column: Education, Skills, and Certifications -->
         <div class="sidebar">
             <section id="education">
                 <h3>🎓 Education</h3>
