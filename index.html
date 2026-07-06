@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zülal Kaya | Personal Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #0ea5e9;
+            --accent-color: #10b981;
+            --text-color: #334155;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        header h2 {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .contact-info span {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .about-text {
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .timeline-item {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--secondary-color);
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .timeline-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .timeline-subtitle {
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item ul {
+            margin-left: 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        .project-card {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .project-card:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .project-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-card p {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card ul {
+            margin-left: 1.2rem;
+            font-size: 0.95rem;
+            color: var(--text-color);
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-badge {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+        }
+
+        .cert-list, .lang-list {
+            list-style: none;
+        }
+
+        .cert-list li, .lang-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cert-list li::before {
+            content: "✓";
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .lang-list li::before {
+            content: "🌐";
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            background-color: var(--primary-color);
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>ZÜLAL KAYA</h1>
+            <h2>Electronics and Communication Engineer</h2>
+            <div class="contact-info">
+                <span>📍 Istanbul, Sancaktepe</span>
+                <span>📞 05300546918</span>
+                <span>✉️ kayazulal17@gmail.com</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <section id="about">
+                <h3>👤 About Me</h3>
+                <p class="about-text">
+                    As an Electronics and Communication Engineering student, I aim to shape my career in communication systems and artificial intelligence. I focus on developing smart systems by integrating signal processing, wireless communication technologies, and machine learning applications. My ultimate goal is to generate innovative solutions by contributing to R&D projects where AI frameworks are deeply integrated into communication infrastructures.
+                </p>
+            </section>
+
+            <section id="experience">
+                <h3>🚀 Team Experience</h3>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 - 2025</div>
+                    <div class="timeline-title">TARS Team (Turkish Air Defense Systems)</div>
+                    <div class="timeline-subtitle">Hardware Team Member</div>
+                    <ul>
+                        <li>Conducted preliminary research on torpedo triggering systems.</li>
+                        <li>Engaged in electronic component selection and system hardware architecture design.</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - 2024</div>
+                    <div class="timeline-title">Gallipoli Team</div>
+                    <div class="timeline-subtitle">Electronics Team Member</div>
+                    <ul>
+                        <li>Assisted in schematic and PCB layout design processes.</li>
+                        <li>Performed soldering, assembly, and testing of custom electronic circuit boards.</li>
+                        <li>Contributed to multi-system electronics integration and hardware troubleshooting.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h3>📁 Projects</h3>
+                <div class="project-card">
+                    <div class="project-title">Detection and Analysis of Deepfake Manipulated Data (Engineering Design II Graduation Project)</div>
+                    <p>An end-to-end deep learning framework was developed to identify AI-generated multimedia manipulations using advanced computer vision and digital forensics principles. Utilizing the benchmark <strong>FaceForensics++</strong> dataset, the system's robustness was systematically evaluated across multiple dimensions:</p>
+                    <ul>
+                        <li><strong>4 Manipulation Methods Analyzed:</strong> The framework effectively detects <em>Deepfakes</em> (Autoencoder-based face swapping), <em>Face2Face</em> (Real-time expression reenactment), <em>FaceSwap</em> (Graphics-based 3D face replacement), and <em>NeuralTextures</em> (GAN/Neural-driven patch regeneration).</li>
+                        <li><strong>4 Robust Test Scenarios:</strong> To assess real-world generalization, the model was trained and validated across four pipeline variations: <strong>Full Frame</strong>, <strong>Face Crop</strong> (aligned/cropped facial regions via MTCNN), <strong>Masked</strong> areas, and <strong>Blurred</strong> frames.</li>
+                        <li><strong>Preprocessing & Architecture:</strong> MTCNN (Multi-task Cascaded Convolutional Networks) was utilized for optimal face detection. A custom-tuned <strong>EfficientNet-B0</strong> model was trained from scratch via transfer learning. The entire data pipeline and hyperparameter tuning were built using <strong>Python</strong> and <strong>PyTorch</strong> within Google Colab GPU environments.</li>
+                        <li><strong>Advanced Evaluation:</strong> Video-level classification decisions were optimized using a <strong>majority voting</strong> algorithm. A comprehensive <strong>ablation study</strong> was conducted across various frame configurations (1, 5, 10, 50 frames), and confusion matrices were extracted to validate the model's exceptional generalization and detection performance.</li>
+                    </ul>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">Smart Baby Monitor (Embedded System Project)</div>
+                    <p>Designed and deployed a microcontroller-based, real-time audio acquisition and wireless broadcasting system. Both hardware and software pipelines were fully built from scratch:</p>
+                    <ul>
+                        <li><strong>Hardware Design:</strong> Designed 2 custom electronic printed circuit boards (Transmitter and Receiver units) using <strong>Altium Designer</strong>, executing full schematic capture, layout optimization, and physical PCB fabrication.</li>
+                        <li><strong>Sensors & Signal Processing:</strong> Ambient sound levels were captured via an analog microphone sensor. High-efficiency data conversion was achieved by leveraging the microcontroller's <strong>ADC Interrupt</strong> (Analog-to-Digital Converter) routine to process incoming signals dynamically.</li>
+                        <li><strong>Wireless Communication:</strong> Processed telemetry and critical voice triggers were broadcast securely to the receiver unit utilizing an integrated <strong>Bluetooth module</strong>.</li>
+                        <li><strong>Control Mechanism:</strong> The receiver unit analyzed incoming real-time packages to automatically trigger a dynamic hardware alert system (LED array control) once customizable thresholds were exceeded.</li>
+                    </ul>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">Voltage Regulator Design</div>
+                    <p>Designed a linear voltage regulator circuit utilizing fundamental active and passive electronic components. Circuit simulation, behavior validation, and transient response analyses were performed using Multisim and LTSpice.</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="sidebar">
+            <section id="education">
+                <h3>🎓 Education</h3>
+                <div class="timeline-item" style="border-left-color: var(--accent-color); padding-left: 1rem; margin-bottom: 0;">
+                    <div class="timeline-date">2022 - 2027</div>
+                    <div class="timeline-title">Kocaeli University</div>
+                    <p style="font-size: 0.95rem;">B.Sc. Electronics and Communication Engineering</p>
+                    <p style="font-size: 0.9rem; font-weight: bold; color: var(--accent-color);">GPA: 3.33 / 4.00</p>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h3>🛠️ Skills</h3>
+                <div class="skills-container">
+                    <span class="skill-badge">STM32</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">MATLAB</span>
+                    <span class="skill-badge">Altium Designer</span>
+                    <span class="skill-badge">MSP430</span>
+                    <span class="skill-badge">C</span>
+                    <span class="skill-badge">Data Analysis</span>
+                    <span class="skill-badge">HTML</span>
+                    <span class="skill-badge">Data Processing with Python</span>
+                    <span class="skill-badge">LTSpice</span>
+                    <span class="skill-badge">Multisim</span>
+                    <span class="skill-badge">Code Composer Studio</span>
+                    <span class="skill-badge">Microsoft Office</span>
+                </div>
+            </section>
+
+            <section id="certifications">
+                <h3>📜 Certifications</h3>
+                <ul class="cert-list">
+                    <li>Artificial Intelligence Foundation</li>
+                    <li>Python for Beginners</li>
+                    <li>Advanced Python Programming</li>
+                </ul>
+            </section>
+
+            <section id="languages">
+                <h3>🗣️ Languages</h3>
+                <ul class="lang-list">
+                    <li><strong>Turkish:</strong> Native</li>
+                    <li><strong>English:</strong> B1</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Zulal Kaya. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
